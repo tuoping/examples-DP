@@ -1,0 +1,118 @@
+{
+    "model": {
+        "type_map": [
+            "I",
+            "Pb",
+            "C",
+            "N",
+            "H"
+        ],
+        "descriptor": {
+            "type": "hybrid",
+            "list": [
+                {
+                    "type": "se_e3",
+                    "sel": [
+                        40,
+                        16,
+                        16,
+                        16,
+                        96
+                    ],
+                    "rcut_smth": 2.0,
+                    "rcut": 6.0,
+                    "neuron": [
+                        25,
+                        50,
+                        100
+                    ],
+                    "resnet_dt": false,
+                    "type_one_side": true,
+                    "axis_neuron": 12,
+                    "seed": 3577767380,
+                    "activation_function": "tanh"
+                },
+                {
+                    "type": "se_e2_a",
+                    "sel": [
+                        40,
+                        16,
+                        16,
+                        16,
+                        96
+                    ],
+                    "rcut_smth": 2.0,
+                    "rcut": 6.0,
+                    "neuron": [
+                        25,
+                        50,
+                        100
+                    ],
+                    "resnet_dt": false,
+                    "type_one_side": true,
+                    "axis_neuron": 12,
+                    "seed": 4578751,
+                    "activation_function": "tanh"
+                }
+            ]
+        },
+        "fitting_net": {
+            "neuron": [
+                240,
+                240,
+                240
+            ],
+            "resnet_dt": true,
+            "seed": 2904405916,
+            "activation_function": "tanh"
+        }
+    },
+    "learning_rate": {
+        "type": "exp",
+        "start_lr": 0.001,
+        "decay_steps": 5000
+    },
+    "loss": {
+        "start_pref_e": 0.02,
+        "limit_pref_e": 2,
+        "start_pref_f": 1000,
+        "limit_pref_f": 1,
+        "start_pref_v": 0.01,
+        "limit_pref_v": 1
+    },
+    "training": {
+        "stop_batch": 1000000,
+        "batch_size": [
+            1,1,1,1,1,
+            1,1,1,1,1,1,1,1,1,1
+        ],
+        "disp_file": "lcurve.out",
+        "disp_freq": 5000,
+        "numb_test": 4,
+        "save_freq": 5000,
+        "save_ckpt": "model.ckpt",
+        "disp_training": true,
+        "time_training": true,
+        "profiling": false,
+        "profiling_file": "timeline.json",
+        "_comment": "that's all",
+        "systems": [
+            "coldata/init.000",
+            "coldata/init.001",
+            "coldata/init.002",
+            "coldata/init.003",
+            "coldata/init.004",
+            "coldata/sys.000",
+            "coldata/sys.001",
+            "coldata/sys.002",
+            "coldata/sys.003",
+            "coldata/sys.004",
+            "coldata/sys.005",
+            "coldata/sys.006",
+            "coldata/sys.007",
+            "coldata/sys.008",
+            "coldata/sys.009"
+        ],
+        "seed": 879629615
+    }
+}

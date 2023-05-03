@@ -1,0 +1,569 @@
+2022-06-15 11:18:15.719004: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+WARNING:tensorflow:From /opt/deepmd-kit-2.0.2/lib/python3.9/site-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:root:Environment variable KMP_BLOCKTIME is empty. Use the default value 0
+WARNING:root:Environment variable KMP_AFFINITY is empty. Use the default value granularity=fine,verbose,compact,1,0
+/opt/deepmd-kit-2.0.2/lib/python3.9/site-packages/deepmd/utils/compat.py:316: UserWarning: It seems that you are using a deepmd-kit input of version 1.x.x, which is deprecated. we have converted the input to >2.0.0 compatible, and output it to file input_v2_compat.json
+  warnings.warn(msg)
+2022-06-15 11:18:23.853297: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-15 11:18:23.855872: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcuda.so.1
+2022-06-15 11:18:23.881780: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:23.882885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:00:08.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-06-15 11:18:23.882926: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-15 11:18:23.888484: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11
+2022-06-15 11:18:23.888544: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11
+2022-06-15 11:18:23.889813: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcufft.so.10
+2022-06-15 11:18:23.890143: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcurand.so.10
+2022-06-15 11:18:23.890895: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusolver.so.11
+2022-06-15 11:18:23.892028: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusparse.so.11
+2022-06-15 11:18:23.892186: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudnn.so.8
+2022-06-15 11:18:23.892296: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:23.893473: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:23.894500: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-06-15 11:18:23.894538: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-06-15 11:18:24.594739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-06-15 11:18:24.594787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2022-06-15 11:18:24.594805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2022-06-15 11:18:24.595054: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:24.596208: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:24.597303: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:24.598359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30996 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:00:08.0, compute capability: 7.0)
+2022-06-15 11:18:24.598846: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2022-06-15 11:18:24.614018: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 2499995000 Hz
+OMP: Info #155: KMP_AFFINITY: Initial OS proc set respected: 0-11
+OMP: Info #216: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #157: KMP_AFFINITY: 12 available OS procs
+OMP: Info #158: KMP_AFFINITY: Uniform topology
+OMP: Info #287: KMP_AFFINITY: topology layer "LL cache" is equivalent to "core".
+OMP: Info #287: KMP_AFFINITY: topology layer "L2 cache" is equivalent to "core".
+OMP: Info #287: KMP_AFFINITY: topology layer "L1 cache" is equivalent to "core".
+OMP: Info #192: KMP_AFFINITY: 1 socket x 6 cores/socket x 2 threads/core (6 total cores)
+OMP: Info #218: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #172: KMP_AFFINITY: OS proc 0 maps to socket 0 core 0 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 1 maps to socket 0 core 0 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 2 maps to socket 0 core 1 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 3 maps to socket 0 core 1 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 4 maps to socket 0 core 2 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 5 maps to socket 0 core 2 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 6 maps to socket 0 core 3 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 7 maps to socket 0 core 3 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 8 maps to socket 0 core 4 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 9 maps to socket 0 core 4 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 10 maps to socket 0 core 5 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 11 maps to socket 0 core 5 thread 1 
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1733 thread 1 bound to OS proc set 2
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1735 thread 2 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1736 thread 3 bound to OS proc set 6
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1737 thread 4 bound to OS proc set 8
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1738 thread 5 bound to OS proc set 10
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1739 thread 6 bound to OS proc set 1
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1740 thread 7 bound to OS proc set 3
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1741 thread 8 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1742 thread 9 bound to OS proc set 7
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1743 thread 10 bound to OS proc set 9
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1744 thread 11 bound to OS proc set 11
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1745 thread 12 bound to OS proc set 0
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1732 thread 13 bound to OS proc set 2
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1746 thread 14 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1747 thread 15 bound to OS proc set 6
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1749 thread 17 bound to OS proc set 10
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1750 thread 18 bound to OS proc set 1
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1751 thread 19 bound to OS proc set 3
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1752 thread 20 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1753 thread 21 bound to OS proc set 7
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1748 thread 16 bound to OS proc set 8
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1754 thread 22 bound to OS proc set 9
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1755 thread 23 bound to OS proc set 11
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1756 thread 24 bound to OS proc set 0
+DEEPMD INFO    training data with min nbor dist: 0.9002605127406177
+DEEPMD INFO    training data with max nbor size: [16, 8, 8, 8, 40]
+DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+DEEPMD INFO    Please read and cite:
+DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+DEEPMD INFO    installed to:         /tmp/pip-req-build-wrdc5opf/_skbuild/linux-x86_64-3.9/cmake-install
+DEEPMD INFO    source :              v2.0.2
+DEEPMD INFO    source brach:         HEAD
+DEEPMD INFO    source commit:        5a847966
+DEEPMD INFO    source commit at:     2021-09-29 16:48:37 +0800
+DEEPMD INFO    build float prec:     double
+DEEPMD INFO    build with tf inc:    /opt/deepmd-kit-2.0.2/lib/python3.9/site-packages/tensorflow/include
+DEEPMD INFO    build with tf lib:    
+DEEPMD INFO    ---Summary of the training---------------------------------------
+DEEPMD INFO    running on:           iZ2zebec0ep1713sw6w5f3Z
+DEEPMD INFO    computing device:     gpu:0
+DEEPMD INFO    CUDA_VISIBLE_DEVICES: unset
+DEEPMD INFO    Count of visible GPU: 1
+DEEPMD INFO    num_intra_threads:    0
+DEEPMD INFO    num_inter_threads:    0
+DEEPMD INFO    -----------------------------------------------------------------
+2022-06-15 11:18:25.917361: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:25.918490: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:00:08.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-06-15 11:18:25.918609: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:25.919669: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:25.920685: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-06-15 11:18:25.920723: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-06-15 11:18:25.920731: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2022-06-15 11:18:25.920737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2022-06-15 11:18:25.920828: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:25.921905: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:25.922937: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30996 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:00:08.0, compute capability: 7.0)
+DEEPMD INFO    ---Summary of DataSystem: training     -----------------------------------------------
+DEEPMD INFO    found 15 system(s):
+DEEPMD INFO                                        system  natoms  bch_sz   n_bch   prob  pbc
+DEEPMD INFO                              coldata/init.000      48       1      22  0.014    T
+DEEPMD INFO                              coldata/init.001      48       1      21  0.013    T
+DEEPMD INFO                              coldata/init.002      48       1      21  0.013    T
+DEEPMD INFO                              coldata/init.003      48       1      16  0.010    T
+DEEPMD INFO                              coldata/init.004      96       1       3  0.002    T
+DEEPMD INFO                               coldata/sys.000      48       1     197  0.126    T
+DEEPMD INFO                               coldata/sys.001      48       1     192  0.122    T
+DEEPMD INFO                               coldata/sys.002      48       1     182  0.116    T
+DEEPMD INFO                               coldata/sys.003      48       1     167  0.107    T
+DEEPMD INFO                               coldata/sys.004      48       1     183  0.117    T
+DEEPMD INFO                               coldata/sys.005      48       1     156  0.099    T
+DEEPMD INFO                               coldata/sys.006      96       1      13  0.008    T
+DEEPMD INFO                               coldata/sys.007      96       1      15  0.010    T
+DEEPMD INFO                               coldata/sys.008      48       1     184  0.117    T
+DEEPMD INFO                               coldata/sys.009      48       1     196  0.125    T
+DEEPMD INFO    --------------------------------------------------------------------------------------
+DEEPMD INFO    training without frame parameter
+OMP: Info #254: KMP_AFFINITY: pid 1678 tid 1678 thread 0 bound to OS proc set 0
+DEEPMD INFO    built lr
+DEEPMD INFO    built network
+DEEPMD INFO    built training
+2022-06-15 11:18:31.348379: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:31.349542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:00:08.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.75GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-06-15 11:18:31.349674: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:31.350735: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:31.351740: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-06-15 11:18:31.351778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-06-15 11:18:31.351787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2022-06-15 11:18:31.351793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2022-06-15 11:18:31.351890: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:31.352963: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2022-06-15 11:18:31.354008: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30996 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:00:08.0, compute capability: 7.0)
+DEEPMD INFO    initialize model from scratch
+DEEPMD INFO    start training at lr 1.00e-03 (== 1.00e-03), decay_step 5000, decay_rate 0.944061, final lr will be 1.00e-08
+2022-06-15 11:18:32.993850: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11
+2022-06-15 11:18:34.491179: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11
+DEEPMD INFO    batch    5000 training time 136.44 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   10000 training time 132.20 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   15000 training time 141.04 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   20000 training time 135.28 s, testing time 0.02 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   25000 training time 133.10 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   30000 training time 138.57 s, testing time 0.01 s
+WARNING:tensorflow:From /opt/deepmd-kit-2.0.2/lib/python3.9/site-packages/tensorflow/python/training/saver.py:969: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+DEEPMD WARNING From /opt/deepmd-kit-2.0.2/lib/python3.9/site-packages/tensorflow/python/training/saver.py:969: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   35000 training time 130.48 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   40000 training time 132.52 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   45000 training time 131.22 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   50000 training time 131.67 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   55000 training time 131.75 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   60000 training time 131.29 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   65000 training time 130.53 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   70000 training time 131.38 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   75000 training time 132.82 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   80000 training time 130.87 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   85000 training time 130.31 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   90000 training time 129.58 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch   95000 training time 132.97 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  100000 training time 132.60 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  105000 training time 128.99 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  110000 training time 131.24 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  115000 training time 131.16 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  120000 training time 137.62 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  125000 training time 131.95 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  130000 training time 132.07 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  135000 training time 133.29 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  140000 training time 130.22 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  145000 training time 132.92 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  150000 training time 132.85 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  155000 training time 131.28 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  160000 training time 134.12 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  165000 training time 148.11 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  170000 training time 136.70 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  175000 training time 136.83 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  180000 training time 131.21 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  185000 training time 132.32 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  190000 training time 134.58 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  195000 training time 144.91 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  200000 training time 132.44 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  205000 training time 131.56 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  210000 training time 132.31 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  215000 training time 131.62 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  220000 training time 137.86 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  225000 training time 133.31 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  230000 training time 133.34 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  235000 training time 132.71 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  240000 training time 142.19 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  245000 training time 131.31 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  250000 training time 136.55 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  255000 training time 133.62 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  260000 training time 134.29 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  265000 training time 137.48 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  270000 training time 133.98 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  275000 training time 132.69 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  280000 training time 134.05 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  285000 training time 139.91 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  290000 training time 138.76 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  295000 training time 130.66 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  300000 training time 132.98 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  305000 training time 130.39 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  310000 training time 131.74 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  315000 training time 131.89 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  320000 training time 138.38 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  325000 training time 130.00 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  330000 training time 131.10 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  335000 training time 131.02 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  340000 training time 131.43 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  345000 training time 129.71 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  350000 training time 132.09 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  355000 training time 133.44 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  360000 training time 133.70 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  365000 training time 137.86 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  370000 training time 130.70 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  375000 training time 138.23 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  380000 training time 129.77 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  385000 training time 129.37 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  390000 training time 129.85 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  395000 training time 139.32 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  400000 training time 131.84 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  405000 training time 132.40 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  410000 training time 130.92 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  415000 training time 129.84 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  420000 training time 130.63 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  425000 training time 129.94 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  430000 training time 130.10 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  435000 training time 131.45 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  440000 training time 133.43 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  445000 training time 131.68 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  450000 training time 129.59 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  455000 training time 132.96 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  460000 training time 140.13 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  465000 training time 131.33 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  470000 training time 129.64 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  475000 training time 130.70 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  480000 training time 132.50 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  485000 training time 131.03 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  490000 training time 130.55 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  495000 training time 136.36 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  500000 training time 136.10 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  505000 training time 132.32 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  510000 training time 132.29 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  515000 training time 133.62 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  520000 training time 145.12 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  525000 training time 139.63 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  530000 training time 133.53 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  535000 training time 148.18 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  540000 training time 134.36 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  545000 training time 131.92 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  550000 training time 130.28 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  555000 training time 129.79 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  560000 training time 130.88 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  565000 training time 129.04 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  570000 training time 133.09 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  575000 training time 133.02 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  580000 training time 142.43 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  585000 training time 145.93 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  590000 training time 133.52 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  595000 training time 138.72 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  600000 training time 136.55 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  605000 training time 133.97 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  610000 training time 137.49 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  615000 training time 133.50 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  620000 training time 133.55 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  625000 training time 132.14 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  630000 training time 131.73 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  635000 training time 132.35 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  640000 training time 130.20 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  645000 training time 131.47 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  650000 training time 132.26 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  655000 training time 137.57 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  660000 training time 132.30 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  665000 training time 131.06 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  670000 training time 131.36 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  675000 training time 141.78 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  680000 training time 141.92 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  685000 training time 128.93 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  690000 training time 133.23 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  695000 training time 133.64 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  700000 training time 131.74 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  705000 training time 130.53 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  710000 training time 129.12 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  715000 training time 132.30 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  720000 training time 133.77 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  725000 training time 131.16 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  730000 training time 129.33 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  735000 training time 130.32 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  740000 training time 131.73 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  745000 training time 131.20 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  750000 training time 133.15 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  755000 training time 132.30 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  760000 training time 131.65 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  765000 training time 131.71 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  770000 training time 134.16 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  775000 training time 132.06 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  780000 training time 132.19 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  785000 training time 131.72 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  790000 training time 131.71 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  795000 training time 129.91 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  800000 training time 131.37 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  805000 training time 130.08 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  810000 training time 134.86 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  815000 training time 133.35 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  820000 training time 134.51 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  825000 training time 131.08 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  830000 training time 132.09 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  835000 training time 130.70 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  840000 training time 129.76 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  845000 training time 129.25 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  850000 training time 130.83 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  855000 training time 131.74 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  860000 training time 138.83 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  865000 training time 131.01 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  870000 training time 130.84 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  875000 training time 133.32 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  880000 training time 136.37 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  885000 training time 139.75 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  890000 training time 137.03 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  895000 training time 131.07 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  900000 training time 134.82 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  905000 training time 134.30 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  910000 training time 131.22 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  915000 training time 130.57 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  920000 training time 132.85 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  925000 training time 131.47 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  930000 training time 131.85 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  935000 training time 131.14 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  940000 training time 132.66 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  945000 training time 129.52 s, testing time 0.02 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  950000 training time 145.93 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  955000 training time 141.50 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  960000 training time 136.75 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  965000 training time 136.23 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  970000 training time 130.02 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  975000 training time 131.42 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  980000 training time 130.42 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  985000 training time 129.31 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  990000 training time 133.70 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch  995000 training time 139.15 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    batch 1000000 training time 131.92 s, testing time 0.01 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    finished training
+DEEPMD INFO    wall time: 27256.185 s
